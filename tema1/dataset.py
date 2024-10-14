@@ -12,8 +12,10 @@ def process_images(images):
         image, label = images[i]
         img_tensor = torch.tensor(np.array(image) / 255.0, dtype=torch.float32).view(-1)
         img.append(img_tensor)
+
         label_tensor = torch.tensor(label, dtype=torch.int64)
         labels.append(label_tensor)
+
     return torch.stack(img), torch.tensor(labels)
 
 
@@ -21,7 +23,7 @@ def load_data():
     train_dataset = MNIST(root='./data', train=True, download=True)
     test_dataset = MNIST(root='./data', train=False, download=True)
 
-    # print(train_dataset[130][1])
+    # print(train_dataset[130][0])
     train_x, train_y = process_images(train_dataset)
     test_x, test_y = process_images(test_dataset)
     train_x, val_x = train_x[:55000], train_x[55000:]
