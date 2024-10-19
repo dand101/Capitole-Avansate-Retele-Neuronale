@@ -37,6 +37,19 @@ basic_transforms = v2.Compose([
     v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True)
 ])
 
+# augmentation_transforms = v2.Compose([
+# #
+# #     # v2.RandomHorizontalFlip(p=0.5),
+# #
+# #     v2.RandomRotation(degrees=10),
+# #
+# #     v2.ColorJitter(brightness=0.05, contrast=0.05),
+# #     v2.ToImage(),
+# #
+# #     v2.ToDtype(torch.float32, scale=True),
+# #     v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=False)
+# # ])
+
 augmentation_transforms = v2.Compose([
 
     v2.RandomRotation(degrees=5),
@@ -50,7 +63,7 @@ augmentation_transforms = v2.Compose([
 ])
 
 train_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, train=True,
-                     transform=basic_transforms)
+                     transform=augmentation_transforms)
 
 test_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, train=False, transform=basic_transforms)
 train_set = SimpleCachedDataset(train_set)
@@ -131,15 +144,8 @@ model = torch.jit.script(model)
 # criterion = nn.CrossEntropyLoss()
 
 
-EPOC = 100
-
 optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=0.01, nesterov=True, fused=True)
-
-# scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOC)
-
-scheduler_one_cycle = torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr=0.02, steps_per_epoch=len(train_loader),
-                                                          epochs=int(EPOC * 0.2))
-scheduler_cosine = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=int(EPOC * 0.8))
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=100)
 
 train_accuracies = []
 val_accuracies = []
@@ -222,8 +228,7 @@ def inference():
 
 
 best = 0.0
-epochs = list(range(EPOC))
-one_cycle_epochs = int(EPOC * 0.2)
+epochs = list(range(100))
 
 with tqdm(epochs) as tbar:
     for epoch in tbar:
@@ -231,12 +236,7 @@ with tqdm(epochs) as tbar:
         train_accuracies.append(train_acc)
         train_losses.append(train_loss)
 
-        # scheduler.step()
-
-        if epoch < one_cycle_epochs:
-            scheduler_one_cycle.step()
-        else:
-            scheduler_cosine.step()
+        scheduler.step()
 
         val_acc, val_loss = val()
         val_accuracies.append(val_acc)

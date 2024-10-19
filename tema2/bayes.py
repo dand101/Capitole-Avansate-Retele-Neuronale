@@ -3,14 +3,12 @@ from torch import nn, Tensor
 import torch.nn.functional as functional
 from torch.utils.data import Dataset, DataLoader
 from torchvision.datasets import CIFAR100
-import pandas as pd
 from torchvision.transforms import v2
 from torch.backends import cudnn
 from torch import GradScaler
 from torch import optim
 from tqdm import tqdm
-import time
-import matplotlib.pyplot as plt
+import optuna
 
 device = torch.device('cuda')
 cudnn.benchmark = True
@@ -21,7 +19,6 @@ scaler = GradScaler(device, enabled=enable_half)
 
 class SimpleCachedDataset(Dataset):
     def __init__(self, dataset):
-        # Runtime transforms are not implemented in this simple cached dataset.
         self.data = tuple([x for x in dataset])
 
     def __len__(self):
@@ -31,32 +28,27 @@ class SimpleCachedDataset(Dataset):
         return self.data[i]
 
 
+augmentation_transforms = v2.Compose([
+    v2.RandomRotation(degrees=5),
+    v2.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.05),
+    v2.RandomAffine(degrees=0, translate=(0.1, 0.1)),
+    v2.ToImage(),
+    v2.ToDtype(torch.float32, scale=True),
+    v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True)
+])
+
 basic_transforms = v2.Compose([
     v2.ToImage(),
     v2.ToDtype(torch.float32, scale=True),
     v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True)
 ])
 
-augmentation_transforms = v2.Compose([
-
-    v2.RandomRotation(degrees=5),
-    v2.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.05),
-    v2.RandomAffine(degrees=0, translate=(0.1, 0.1)),
-
-    v2.ToImage(),
-
-    v2.ToDtype(torch.float32, scale=True),
-    v2.Normalize((0.5, 0.5, 0.5), (0.25, 0.25, 0.25), inplace=True)
-])
-
 train_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, train=True,
-                     transform=basic_transforms)
-
-test_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, train=False, transform=basic_transforms)
+                     transform=augmentation_transforms)
+test_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, train=False,
+                    transform=basic_transforms)
 train_set = SimpleCachedDataset(train_set)
 test_set = SimpleCachedDataset(test_set)
-
-cutMix = v2.CutMix(num_classes=100)
 
 train_loader = DataLoader(train_set, batch_size=128, shuffle=True, pin_memory=pin_memory)
 test_loader = DataLoader(test_set, batch_size=500, pin_memory=pin_memory)
@@ -125,29 +117,8 @@ class VGG16(nn.Module):
         return self.layers(x)
 
 
-model = VGG16().to(device)
-model = torch.jit.script(model)
-
-# criterion = nn.CrossEntropyLoss()
-
-
-EPOC = 100
-
-optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=0.01, nesterov=True, fused=True)
-
-# scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOC)
-
-scheduler_one_cycle = torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr=0.02, steps_per_epoch=len(train_loader),
-                                                          epochs=int(EPOC * 0.2))
-scheduler_cosine = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=int(EPOC * 0.8))
-
-train_accuracies = []
-val_accuracies = []
-train_losses = []
-val_losses = []
-
-
-def train():
+# Training loop
+def train(model, optimizer):
     model.train()
     correct = 0
     total = 0
@@ -155,7 +126,6 @@ def train():
 
     for inputs, targets in train_loader:
         inputs, targets = inputs.to(device, non_blocking=True), targets.to(device, non_blocking=True)
-        inputs, targets = cutMix(inputs, targets)
 
         with torch.autocast(device.type, enabled=enable_half):
             outputs = model(inputs)
@@ -171,15 +141,16 @@ def train():
         predicted = outputs.argmax(1)
         total += targets.size(0)
 
-        correct += predicted.eq(targets.argmax(1)).sum().item()
+        correct += predicted.eq(targets).sum().item()
 
     avg_loss = total_loss / total
     accuracy = 100.0 * correct / total
     return accuracy, avg_loss
 
 
+# Validation loop
 @torch.inference_mode()
-def val():
+def val(model):
     model.eval()
     correct = 0
     total = 0
@@ -204,79 +175,49 @@ def val():
     return accuracy, avg_loss
 
 
-@torch.inference_mode()
-def inference():
-    model.eval()
+# Optuna objective function
+def objective(trial):
+    # Hyperparameters to tune
+    lr = trial.suggest_loguniform('lr', 1e-4, 1e-2)
+    momentum = trial.suggest_uniform('momentum', 0.85, 0.99)
+    weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-2)
 
-    labels = []
+    # Define model, optimizer, and scheduler
+    model = VGG16().to(device)
+    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay, nesterov=True)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=50)
 
-    for inputs, _ in test_loader:
-        inputs = inputs.to(device, non_blocking=True)
-        with torch.autocast(device.type, enabled=enable_half):
-            outputs = model(inputs)
+    best_val_acc = 0.0
 
-        predicted = outputs.argmax(1).tolist()
-        labels.extend(predicted)
+    for epoch in range(50):
+        train_acc, train_loss = train(model, optimizer)
+        val_acc, val_loss = val(model)
 
-    return labels
+        scheduler.step()
+
+        if val_acc > best_val_acc:
+            best_val_acc = val_acc
+
+    return best_val_acc
 
 
-best = 0.0
-epochs = list(range(EPOC))
-one_cycle_epochs = int(EPOC * 0.2)
+# Run Optuna optimization
+study = optuna.create_study(direction='maximize')
 
-with tqdm(epochs) as tbar:
-    for epoch in tbar:
-        train_acc, train_loss = train()
-        train_accuracies.append(train_acc)
-        train_losses.append(train_loss)
-
-        # scheduler.step()
-
-        if epoch < one_cycle_epochs:
-            scheduler_one_cycle.step()
-        else:
-            scheduler_cosine.step()
-
-        val_acc, val_loss = val()
-        val_accuracies.append(val_acc)
-        val_losses.append(val_loss)
-
-        if val_acc > best:
-            best = val_acc
-        tbar.set_description(f"Train: {train_acc:.2f}, Val: {val_acc:.2f}, Best: {best:.2f}")
-
-plt.figure(figsize=(12, 5))
-plt.subplot(1, 2, 1)
-plt.plot(epochs, train_accuracies, label="Train Accuracy", marker='o')
-plt.plot(epochs, val_accuracies, label="Validation Accuracy", marker='x')
-plt.title("Training and Validation Accuracy over Epochs")
-plt.xlabel("Epochs")
-plt.ylabel("Accuracy (%)")
-plt.legend(loc="best")
-plt.grid(True)
-
-plt.subplot(1, 2, 2)
-plt.plot(epochs, train_losses, label="Train Loss", marker='o')
-plt.plot(epochs, val_losses, label="Validation Loss", marker='x')
-plt.title("Training and Validation Loss over Epochs")
-plt.xlabel("Epochs")
-plt.ylabel("Loss")
-plt.legend(loc="best")
-plt.grid(True)
-
-plt.tight_layout()
-plt.show()
-
-data = {
-    "ID": [],
-    "target": []
+starting_point = {
+    'lr': 0.01,
+    'momentum': 0.9,
+    'weight_decay': 1e-2
 }
 
-for i, label in enumerate(inference()):
-    data["ID"].append(i)
-    data["target"].append(label)
+study.enqueue_trial(starting_point)
 
-df = pd.DataFrame(data)
+study.optimize(objective, n_trials=50)
 
-df.to_csv(f"submission.csv_{time.time()}", index=False)
+# Print the best hyperparameters and result
+print('Best trial:')
+trial = study.best_trial
+print(f'  Best Validation Accuracy: {trial.value}')
+print('  Best Hyperparameters: ')
+for key, value in trial.params.items():
+    print(f'    {key}: {value}')

@@ -56,8 +56,6 @@ test_set = CIFAR100('/kaggle/input/fii-atnn-2024-assignment-2', download=True, t
 train_set = SimpleCachedDataset(train_set)
 test_set = SimpleCachedDataset(test_set)
 
-cutMix = v2.CutMix(num_classes=100)
-
 train_loader = DataLoader(train_set, batch_size=128, shuffle=True, pin_memory=pin_memory)
 test_loader = DataLoader(test_set, batch_size=500, pin_memory=pin_memory)
 
@@ -128,23 +126,22 @@ class VGG16(nn.Module):
 model = VGG16().to(device)
 model = torch.jit.script(model)
 
-# criterion = nn.CrossEntropyLoss()
-
+criterion = nn.CrossEntropyLoss()
 
 EPOC = 100
 
-optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=0.01, nesterov=True, fused=True)
-
-# scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOC)
-
-scheduler_one_cycle = torch.optim.lr_scheduler.OneCycleLR(optimizer, max_lr=0.02, steps_per_epoch=len(train_loader),
-                                                          epochs=int(EPOC * 0.2))
-scheduler_cosine = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=int(EPOC * 0.8))
+optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=1e-2, nesterov=True, fused=True)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOC)
 
 train_accuracies = []
 val_accuracies = []
 train_losses = []
 val_losses = []
+
+cutMix = v2.CutMix(num_classes=100)
+mixUp = v2.MixUp(num_classes=100)
+
+rand_choice = v2.RandomChoice([cutMix, mixUp])
 
 
 def train():
@@ -155,22 +152,22 @@ def train():
 
     for inputs, targets in train_loader:
         inputs, targets = inputs.to(device, non_blocking=True), targets.to(device, non_blocking=True)
-        inputs, targets = cutMix(inputs, targets)
+        # inputs, targets = cutMix(inputs, targets)
+        inputs, targets = rand_choice(inputs, targets)
 
         with torch.autocast(device.type, enabled=enable_half):
             outputs = model(inputs)
-            loss = functional.cross_entropy(outputs, targets)
-
-        total_loss += loss.item() * inputs.size(0)
+            loss = criterion(outputs, targets)
 
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
         optimizer.zero_grad()
 
+        total_loss += loss.item() * inputs.size(0)
+
         predicted = outputs.argmax(1)
         total += targets.size(0)
-
         correct += predicted.eq(targets.argmax(1)).sum().item()
 
     avg_loss = total_loss / total
@@ -190,7 +187,7 @@ def val():
 
         with torch.autocast(device.type, enabled=enable_half):
             outputs = model(inputs)
-            loss = functional.cross_entropy(outputs, targets)
+            loss = criterion(outputs, targets)
 
         total_loss += loss.item() * inputs.size(0)
 
@@ -231,12 +228,7 @@ with tqdm(epochs) as tbar:
         train_accuracies.append(train_acc)
         train_losses.append(train_loss)
 
-        # scheduler.step()
-
-        if epoch < one_cycle_epochs:
-            scheduler_one_cycle.step()
-        else:
-            scheduler_cosine.step()
+        scheduler.step()
 
         val_acc, val_loss = val()
         val_accuracies.append(val_acc)
