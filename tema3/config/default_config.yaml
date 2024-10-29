@@ -1,0 +1,10 @@
+# config/default_config.yaml
+dataset: "CIFAR10"                  # Dataset choice: "MNIST", "CIFAR10", "CIFAR100"
+batch_size: 64                      # Batch size for training and testing
+cache: true                         # Enable or disable caching
+augmentations: # Augmentation options
+  random_flip: true                 # Random horizontal flip
+  random_crop: true                 # Random crop (for CIFAR datasets)
+  random_rotation: false            # Random rotation
+  color_jitter: false               # Color jitter
+  normalization: true               # Normalization
