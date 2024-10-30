@@ -4,14 +4,12 @@ from .cifar10 import get_cifar10_data_loader
 from .cifar100 import get_cifar100_data_loader
 
 
-def get_data_loaders(config):
-    dataset_name = config['dataset']
-    batch_size = config['batch_size']
-
-    augment_config = config['augmentations']
+def get_data_loaders(dataset_config):
+    dataset_name = dataset_config['name']
+    batch_size = dataset_config['batch_size']
+    augment_config = dataset_config['augmentations']
     augment_config['dataset'] = dataset_name
-
-    cache = config['cache']
+    cache = dataset_config['cache']
 
     if dataset_name == 'MNIST':
         return get_mnist_data_loader(batch_size, augment_config, cache)

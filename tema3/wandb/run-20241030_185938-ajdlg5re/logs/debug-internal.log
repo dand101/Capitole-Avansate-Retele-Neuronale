@@ -1,0 +1,16 @@
+{"time":"2024-10-30T18:59:38.0336876+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-30T18:59:38.0336876+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241030_185938-ajdlg5re\\logs\\debug-core.log"}
+{"time":"2024-10-30T18:59:38.1443654+02:00","level":"INFO","msg":"created new stream","id":"ajdlg5re"}
+{"time":"2024-10-30T18:59:38.1443654+02:00","level":"INFO","msg":"stream: started","id":"ajdlg5re"}
+{"time":"2024-10-30T18:59:38.1443654+02:00","level":"INFO","msg":"sender: started","stream_id":"ajdlg5re"}
+{"time":"2024-10-30T18:59:38.1443654+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ajdlg5re"}}
+{"time":"2024-10-30T18:59:38.1443654+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ajdlg5re"}}
+{"time":"2024-10-30T18:59:38.5177234+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-30T19:00:22.2695822+02:00","level":"INFO","msg":"stream: closing","id":"ajdlg5re"}
+{"time":"2024-10-30T19:00:22.2695822+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-30T19:00:22.2700902+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-30T19:00:26.3688167+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-30T19:00:26.6326121+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ajdlg5re"}}
+{"time":"2024-10-30T19:00:26.6326121+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ajdlg5re"}}
+{"time":"2024-10-30T19:00:26.6326121+02:00","level":"INFO","msg":"sender: closed","stream_id":"ajdlg5re"}
+{"time":"2024-10-30T19:00:26.6326121+02:00","level":"INFO","msg":"stream: closed","id":"ajdlg5re"}

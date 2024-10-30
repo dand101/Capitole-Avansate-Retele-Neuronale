@@ -1,10 +1,57 @@
 # config/default_config.yaml
-dataset: "CIFAR10"                  # Dataset choice: "MNIST", "CIFAR10", "CIFAR100"
-batch_size: 64                      # Batch size for training and testing
-cache: true                         # Enable or disable caching
-augmentations: # Augmentation options
-  random_flip: true                 # Random horizontal flip
-  random_crop: true                 # Random crop (for CIFAR datasets)
-  random_rotation: false            # Random rotation
-  color_jitter: false               # Color jitter
-  normalization: true               # Normalization
+
+dataset:
+  name: "CIFAR100"
+  batch_size: 256
+  cache: true
+  augmentations:
+    random_flip: true
+    random_crop: true
+    random_rotation: true
+    color_jitter: true
+    normalization: true
+
+model:
+  name: "resnet18"
+  num_classes: 100
+  pretrained: true
+
+optimizer:
+  type: "SGD"                  # Options: SGD, Adam, AdamW, RmsProp
+  learning_rate: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+  nesterov: true              # Only for SGD
+
+scheduler:
+  type: "ReduceLROnPlateau"               # Options: StepLR, ReduceLROnPlateau, or None
+  step_size: 10
+  gamma: 0.1
+  patience: 5                  # Only for ReduceLROnPlateau
+
+training:
+  epochs: 50                   # Number of training epochs
+  early_stopping:
+    enabled: true              # Enable or disable early stopping
+    patience: 3                # Number of epochs with no improvement to wait before stopping
+    min_delta: 0.01            # Minimum change to qualify as an improvement
+
+sweep:
+  enabled: false                # Enable or disable parameter sweep
+  method: "grid"               # Sweep method: grid, random, or bayes
+  metric:
+    name: "Validation Accuracy"
+    goal: "maximize"           # Goal: maximize or minimize
+  parameters:
+    model.name:
+      values: [ "resnet18", "resnet50" ]
+    dataset.augmentations.random_flip:
+      values: [ true, false ]
+    dataset.augmentations.color_jitter:
+      values: [ true, false ]
+    optimizer.type:
+      values: [ "SGD", "Adam" ]
+    optimizer.learning_rate:
+      values: [ 0.001, 0.01 ]
+    optimizer.momentum:
+      values: [ 0.9, 0.95 ]

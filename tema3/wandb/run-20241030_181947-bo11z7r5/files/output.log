@@ -1,0 +1,85 @@
+
+Epoch 1/50
+Training: 100%|██████████| 782/782 [00:42<00:00, 18.21batch/s, loss=3.45]
+Average Training Loss: 3.8905
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 71.06batch/s, accuracy=21.9]
+Validation Accuracy: 21.89%
+
+Epoch 2/50
+Training: 100%|██████████| 782/782 [00:45<00:00, 17.11batch/s, loss=3.46]
+Average Training Loss: 3.1290
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 69.83batch/s, accuracy=28.2]
+Validation Accuracy: 28.19%
+
+Epoch 3/50
+Training: 100%|██████████| 782/782 [00:43<00:00, 17.83batch/s, loss=2.84]
+Average Training Loss: 2.8188
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 73.17batch/s, accuracy=33.7]
+Validation Accuracy: 33.70%
+
+Epoch 4/50
+Training: 100%|██████████| 782/782 [00:45<00:00, 17.26batch/s, loss=2.71]
+Average Training Loss: 2.6396
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 72.17batch/s, accuracy=37.3]
+Validation Accuracy: 37.28%
+
+Epoch 5/50
+Training: 100%|██████████| 782/782 [00:44<00:00, 17.49batch/s, loss=2.32]
+Average Training Loss: 2.4964
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 73.16batch/s, accuracy=40.5]
+Validation Accuracy: 40.46%
+
+Epoch 6/50
+Training: 100%|██████████| 782/782 [00:45<00:00, 17.18batch/s, loss=2.38]
+Average Training Loss: 2.4065
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 71.02batch/s, accuracy=38.9]
+Validation Accuracy: 38.91%
+
+Epoch 7/50
+Training: 100%|██████████| 782/782 [00:44<00:00, 17.51batch/s, loss=2.06]
+Average Training Loss: 2.3245
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 69.55batch/s, accuracy=41.2]
+Validation Accuracy: 41.22%
+
+Epoch 8/50
+Training: 100%|██████████| 782/782 [00:44<00:00, 17.66batch/s, loss=2.16]
+Average Training Loss: 2.2522
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 67.82batch/s, accuracy=44.8]
+Validation Accuracy: 44.76%
+
+Epoch 9/50
+Training: 100%|██████████| 782/782 [00:44<00:00, 17.41batch/s, loss=2.2] 
+Average Training Loss: 2.1817
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 67.62batch/s, accuracy=45.5]
+Validation Accuracy: 45.47%
+
+Epoch 10/50
+Training: 100%|██████████| 782/782 [00:45<00:00, 17.04batch/s, loss=1.81]
+Average Training Loss: 2.1302
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 77.38batch/s, accuracy=46.6]
+Validation Accuracy: 46.60%
+
+Epoch 11/50
+Training: 100%|██████████| 782/782 [00:46<00:00, 16.83batch/s, loss=2.61]
+Average Training Loss: 2.0774
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 74.93batch/s, accuracy=47.2]
+Validation Accuracy: 47.19%
+
+Epoch 12/50
+Training: 100%|██████████| 782/782 [00:45<00:00, 17.28batch/s, loss=3.17]
+Average Training Loss: 2.0611
+Evaluating: 100%|██████████| 157/157 [00:02<00:00, 66.26batch/s, accuracy=47.2]
+Validation Accuracy: 47.18%
+
+Epoch 13/50
+Training:  35%|███▍      | 272/782 [00:14<00:27, 18.42batch/s, loss=2.26]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 124, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 96, in main
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 49, in train_one_epoch
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

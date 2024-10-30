@@ -1,0 +1,106 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "2":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "3":
+                - 16
+                - 23
+                - 55
+            "4": 3.12.3
+            "5": 0.18.5
+            "8":
+                - 3
+                - 5
+            "12": 0.18.5
+            "13": windows-amd64
+dataset:
+    value:
+        augmentations:
+            color_jitter: true
+            dataset: CIFAR100
+            normalization: true
+            random_crop: true
+            random_flip: true
+            random_rotation: true
+        batch_size: 256
+        cache: true
+        name: CIFAR100
+model:
+    value:
+        name: resnet18
+        num_classes: 100
+        pretrained: true
+optimizer:
+    value:
+        learning_rate: 0.01
+        momentum: 0.9
+        nesterov: true
+        type: SGD
+        weight_decay: 0.0001
+scheduler:
+    value:
+        gamma: 0.1
+        patience: 5
+        step_size: 10
+        type: ReduceLROnPlateau
+sweep:
+    value:
+        enabled: false
+        method: grid
+        metric:
+            goal: maximize
+            name: Validation Accuracy
+        parameters:
+            dataset.augmentations.color_jitter:
+                values:
+                    - true
+                    - false
+            dataset.augmentations.random_flip:
+                values:
+                    - true
+                    - false
+            model.name:
+                values:
+                    - resnet18
+                    - resnet50
+            optimizer.learning_rate:
+                values:
+                    - 0.001
+                    - 0.01
+            optimizer.momentum:
+                values:
+                    - 0.9
+                    - 0.95
+            optimizer.type:
+                values:
+                    - SGD
+                    - Adam
+training:
+    value:
+        early_stopping:
+            enabled: true
+            min_delta: 0.01
+            patience: 3
+        epochs: 1

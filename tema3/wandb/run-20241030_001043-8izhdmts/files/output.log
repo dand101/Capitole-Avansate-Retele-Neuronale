@@ -1,0 +1,30 @@
+
+Epoch 1/5
+Training: 100%|██████████| 782/782 [00:39<00:00, 19.89batch/s, loss=3.78]
+Average Training Loss: 3.8785
+Evaluating: 100%|██████████| 157/157 [00:09<00:00, 15.84batch/s, accuracy=21.6]
+Validation Accuracy: 21.59%
+
+Epoch 2/5
+Training: 100%|██████████| 782/782 [00:38<00:00, 20.29batch/s, loss=3.3] 
+Average Training Loss: 3.1297
+Evaluating: 100%|██████████| 157/157 [00:09<00:00, 16.31batch/s, accuracy=30.2]
+Validation Accuracy: 30.25%
+
+Epoch 3/5
+Training: 100%|██████████| 782/782 [00:37<00:00, 20.91batch/s, loss=3.52]
+Average Training Loss: 2.8326
+Evaluating: 100%|██████████| 157/157 [00:09<00:00, 16.19batch/s, accuracy=34.5] 
+Validation Accuracy: 34.47%
+
+Epoch 4/5
+Training: 100%|██████████| 782/782 [00:35<00:00, 22.15batch/s, loss=2.29]
+Average Training Loss: 2.6397
+Evaluating: 100%|██████████| 157/157 [00:10<00:00, 15.23batch/s, accuracy=39.3]
+Validation Accuracy: 39.26%
+
+Epoch 5/5
+Training: 100%|██████████| 782/782 [00:38<00:00, 20.37batch/s, loss=2.73]
+Average Training Loss: 2.5068
+Evaluating: 100%|██████████| 157/157 [00:09<00:00, 15.84batch/s, accuracy=40.3]
+Validation Accuracy: 40.34%
