@@ -1,0 +1,16 @@
+{"time":"2024-11-03T23:22:34.8900322+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T23:22:34.8901233+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_232234-c66pir2d\\logs\\debug-core.log"}
+{"time":"2024-11-03T23:22:35.0008561+02:00","level":"INFO","msg":"created new stream","id":"c66pir2d"}
+{"time":"2024-11-03T23:22:35.0008561+02:00","level":"INFO","msg":"stream: started","id":"c66pir2d"}
+{"time":"2024-11-03T23:22:35.0008561+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"c66pir2d"}}
+{"time":"2024-11-03T23:22:35.001384+02:00","level":"INFO","msg":"sender: started","stream_id":"c66pir2d"}
+{"time":"2024-11-03T23:22:35.001384+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"c66pir2d"}}
+{"time":"2024-11-03T23:22:35.3514513+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T23:31:20.3308216+02:00","level":"INFO","msg":"stream: closing","id":"c66pir2d"}
+{"time":"2024-11-03T23:31:20.3308216+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T23:31:20.3313252+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T23:31:22.665237+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T23:31:22.929215+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"c66pir2d"}}
+{"time":"2024-11-03T23:31:22.929215+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"c66pir2d"}}
+{"time":"2024-11-03T23:31:22.929215+02:00","level":"INFO","msg":"sender: closed","stream_id":"c66pir2d"}
+{"time":"2024-11-03T23:31:22.929215+02:00","level":"INFO","msg":"stream: closed","id":"c66pir2d"}

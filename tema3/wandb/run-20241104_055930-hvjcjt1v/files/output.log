@@ -1,0 +1,100 @@
+Files already downloaded and verified
+Files already downloaded and verified
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+
+Epoch 1/50
+Training: 100%|██████████| 196/196 [00:46<00:00,  4.24batch/s, accuracy=1.16, loss=5.1]  
+Average Training Loss: 6.8728, Training Accuracy: 1.16%
+Evaluating: 100%|██████████| 40/40 [00:30<00:00,  1.31batch/s, accuracy=1.17, loss=6.12]
+Validation Loss: 4.6819, Validation Accuracy: 1.17%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.23batch/s, accuracy=1.64, loss=4.47]
+Average Training Loss: 4.7795, Training Accuracy: 1.64%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 59.11batch/s, accuracy=1.92, loss=7.3] 
+Validation Loss: 6.1725, Validation Accuracy: 1.92%
+
+Epoch 3/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.17batch/s, accuracy=3.36, loss=4.42]
+Average Training Loss: 4.4447, Training Accuracy: 3.36%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.94batch/s, accuracy=3.83, loss=4.02]
+Validation Loss: 4.2425, Validation Accuracy: 3.83%
+
+Epoch 4/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.15batch/s, accuracy=5.47, loss=4.18]
+Average Training Loss: 4.1617, Training Accuracy: 5.47%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.88batch/s, accuracy=4.76, loss=4.55]
+Validation Loss: 4.3085, Validation Accuracy: 4.76%
+
+Epoch 5/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.12batch/s, accuracy=6.72, loss=3.89]
+Average Training Loss: 4.0538, Training Accuracy: 6.72%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 59.00batch/s, accuracy=8.02, loss=4.56]
+Validation Loss: 4.0756, Validation Accuracy: 8.02%
+
+Epoch 6/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 16.99batch/s, accuracy=8.59, loss=4]   
+Average Training Loss: 3.9325, Training Accuracy: 8.59%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.53batch/s, accuracy=9.86, loss=4.26]
+Validation Loss: 3.8239, Validation Accuracy: 9.86%
+
+Epoch 7/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.03batch/s, accuracy=10.7, loss=4.01]
+Average Training Loss: 3.7898, Training Accuracy: 10.74%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.49batch/s, accuracy=9.4, loss=4.24] 
+Validation Loss: 4.0526, Validation Accuracy: 9.40%
+
+Epoch 8/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.02batch/s, accuracy=12.4, loss=3.83]
+Average Training Loss: 3.6809, Training Accuracy: 12.43%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.69batch/s, accuracy=12.3, loss=3.43]
+Validation Loss: 3.7194, Validation Accuracy: 12.35%
+
+Epoch 9/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 16.98batch/s, accuracy=14.4, loss=3.75]
+Average Training Loss: 3.5517, Training Accuracy: 14.40%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.87batch/s, accuracy=9.01, loss=5.03]
+Validation Loss: 4.6039, Validation Accuracy: 9.01%
+
+Epoch 10/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 16.97batch/s, accuracy=16.7, loss=3.11]
+Average Training Loss: 3.4164, Training Accuracy: 16.71%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.16batch/s, accuracy=18.2, loss=3.34]
+Validation Loss: 3.4157, Validation Accuracy: 18.24%
+
+Epoch 11/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 16.95batch/s, accuracy=19.1, loss=3.15]
+Average Training Loss: 3.2767, Training Accuracy: 19.13%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.64batch/s, accuracy=14.7, loss=3.39]
+Validation Loss: 3.9965, Validation Accuracy: 14.65%
+
+Epoch 12/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 16.98batch/s, accuracy=21.6, loss=3.14]
+Average Training Loss: 3.1314, Training Accuracy: 21.63%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.59batch/s, accuracy=16.4, loss=3.53]
+Validation Loss: 3.8069, Validation Accuracy: 16.41%
+
+Epoch 13/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.06batch/s, accuracy=23.7, loss=2.9] 
+Average Training Loss: 3.0085, Training Accuracy: 23.72%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.75batch/s, accuracy=24.2, loss=2.5] 
+Validation Loss: 2.9141, Validation Accuracy: 24.19%
+
+Epoch 14/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.06batch/s, accuracy=25.6, loss=2.71]
+Average Training Loss: 2.8998, Training Accuracy: 25.59%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.95batch/s, accuracy=23.2, loss=3.13]
+Validation Loss: 3.1095, Validation Accuracy: 23.24%
+
+Epoch 15/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.04batch/s, accuracy=27.1, loss=2.54]
+Average Training Loss: 2.8136, Training Accuracy: 27.11%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.66batch/s, accuracy=22.9, loss=4.15]
+Validation Loss: 3.3616, Validation Accuracy: 22.93%
+
+Epoch 16/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.07batch/s, accuracy=29.3, loss=2.73]
+Average Training Loss: 2.7185, Training Accuracy: 29.27%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 58.38batch/s, accuracy=22.2, loss=3.15]
+Validation Loss: 3.3062, Validation Accuracy: 22.21%
+Early stopping at epoch 16. No improvement for 3 epochs.

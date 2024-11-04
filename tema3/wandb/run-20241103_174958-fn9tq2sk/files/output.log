@@ -1,0 +1,9 @@
+Files already downloaded and verified
+Files already downloaded and verified
+wandb: WARNING Ignored wandb.init() arg project when running a sweep.
+
+Epoch 1/1
+Training: 100%|██████████| 196/196 [00:07<00:00, 24.59batch/s, loss=3.32]
+Average Training Loss: 4.0498
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 33.58batch/s, accuracy=22.6]
+Validation Accuracy: 22.58%

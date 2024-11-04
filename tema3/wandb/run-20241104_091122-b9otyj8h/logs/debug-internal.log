@@ -1,0 +1,8 @@
+{"time":"2024-11-04T09:11:22.2122797+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-04T09:11:22.2122797+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241104_091122-b9otyj8h\\logs\\debug-core.log"}
+{"time":"2024-11-04T09:11:22.3228263+02:00","level":"INFO","msg":"created new stream","id":"b9otyj8h"}
+{"time":"2024-11-04T09:11:22.323354+02:00","level":"INFO","msg":"stream: started","id":"b9otyj8h"}
+{"time":"2024-11-04T09:11:22.3234074+02:00","level":"INFO","msg":"sender: started","stream_id":"b9otyj8h"}
+{"time":"2024-11-04T09:11:22.3234074+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"b9otyj8h"}}
+{"time":"2024-11-04T09:11:22.3234074+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"b9otyj8h"}}
+{"time":"2024-11-04T09:11:22.8486402+02:00","level":"INFO","msg":"Starting system monitor"}

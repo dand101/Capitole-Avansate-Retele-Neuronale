@@ -1,0 +1,31 @@
+
+Epoch 1/50
+Training:   0%|          | 0/196 [00:00<?, ?batch/s]C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py:131: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=scaler.is_enabled()):
+Training: 100%|██████████| 196/196 [00:49<00:00,  3.99batch/s, accuracy=21.4, loss=2.77]
+Average Training Loss: 3.6371, Training Accuracy: 21.39%
+Evaluating: 100%|██████████| 40/40 [00:24<00:00,  1.63batch/s, accuracy=56, loss=1.52]  
+Validation Loss: 1.6468, Validation Accuracy: 55.99%
+
+Epoch 2/50
+Training:  42%|████▏     | 82/196 [00:11<00:15,  7.42batch/s, accuracy=40, loss=2.18]  
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 253, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 249, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 209, in run_training
+    train_loss, train_accuracy = train_one_epoch(model, train_loader, optimizer, scaler, device, other_augmentation)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 136, in train_one_epoch
+    scaler.step(optimizer)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 454, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 351, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 351, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+               ^^^^^^^^
+KeyboardInterrupt

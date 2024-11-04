@@ -1,0 +1,16 @@
+{"time":"2024-11-03T20:30:16.7593713+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T20:30:16.7598996+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_203016-ok28op2n\\logs\\debug-core.log"}
+{"time":"2024-11-03T20:30:16.8702352+02:00","level":"INFO","msg":"created new stream","id":"ok28op2n"}
+{"time":"2024-11-03T20:30:16.8702352+02:00","level":"INFO","msg":"stream: started","id":"ok28op2n"}
+{"time":"2024-11-03T20:30:16.8702352+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ok28op2n"}}
+{"time":"2024-11-03T20:30:16.8702352+02:00","level":"INFO","msg":"sender: started","stream_id":"ok28op2n"}
+{"time":"2024-11-03T20:30:16.8702352+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ok28op2n"}}
+{"time":"2024-11-03T20:30:17.2334598+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T20:30:17.8286355+02:00","level":"INFO","msg":"stream: closing","id":"ok28op2n"}
+{"time":"2024-11-03T20:30:17.8286355+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T20:30:17.8291617+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T20:30:18.5958663+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T20:30:18.8723079+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ok28op2n"}}
+{"time":"2024-11-03T20:30:18.8723079+02:00","level":"INFO","msg":"sender: closed","stream_id":"ok28op2n"}
+{"time":"2024-11-03T20:30:18.8723079+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ok28op2n"}}
+{"time":"2024-11-03T20:30:18.8728187+02:00","level":"INFO","msg":"stream: closed","id":"ok28op2n"}

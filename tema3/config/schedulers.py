@@ -1,5 +1,5 @@
 # config/schedulers.py
-from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau
+from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau, CosineAnnealingLR
 
 
 def get_scheduler(optimizer, config):
@@ -14,6 +14,10 @@ def get_scheduler(optimizer, config):
         patience = config['scheduler'].get('patience', 5)
         factor = config['scheduler'].get('gamma', 0.1)
         return ReduceLROnPlateau(optimizer, patience=patience, factor=factor)
+
+    elif scheduler_type == "CosineAnnealingLR":
+        T_max = config['scheduler'].get('T_max', 50)
+        return CosineAnnealingLR(optimizer, T_max=T_max)
 
     elif scheduler_type == "None":
         return None

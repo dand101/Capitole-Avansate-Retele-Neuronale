@@ -1,0 +1,9 @@
+
+Epoch 1/50
+Training: 100%|██████████| 196/196 [01:37<00:00,  2.01batch/s, accuracy=2.89, loss=4.42] 
+Average Training Loss: 4.5613, Training Accuracy: 2.89%
+Evaluating: 100%|██████████| 40/40 [00:39<00:00,  1.00batch/s, accuracy=8.35, loss=4.37]
+Validation Loss: 4.3621, Validation Accuracy: 8.35%
+
+Epoch 2/50
+Training:  83%|████████▎ | 162/196 [00:38<00:07,  4.33batch/s, accuracy=10.5, loss=4.1] 

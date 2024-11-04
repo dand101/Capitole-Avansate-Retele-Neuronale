@@ -1,0 +1,16 @@
+wandb_version: 1
+
+augmentations_enabled:
+  value: true
+learning_rate:
+  value: 0.001
+model_name:
+  value: resnet18
+momentum:
+  value: 0.9
+nesterov:
+  value: true
+optimizer_type:
+  value: Adam
+weight_decay:
+  value: 0.0001

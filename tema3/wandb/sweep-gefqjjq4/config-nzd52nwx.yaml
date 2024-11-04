@@ -1,0 +1,38 @@
+wandb_version: 1
+
+augmentations_enabled:
+  value: false
+dataset.batch_size:
+  value: 256
+dataset.cache:
+  value: true
+dataset.name:
+  value: CIFAR100
+model.name:
+  value: resnet18
+optimizer.learning_rate:
+  value: 0.001
+optimizer.momentum:
+  value: 0.9
+optimizer.nesterov:
+  value: true
+optimizer.type:
+  value: SGD
+optimizer.weight_decay:
+  value: 0.001
+scheduler.gamma:
+  value: 0.1
+scheduler.patience:
+  value: 5
+scheduler.step_size:
+  value: 10
+scheduler.type:
+  value: ReduceLROnPlateau
+training.early_stopping.enabled:
+  value: true
+training.early_stopping.min_delta:
+  value: 0.01
+training.early_stopping.patience:
+  value: 3
+training.epochs:
+  value: 1

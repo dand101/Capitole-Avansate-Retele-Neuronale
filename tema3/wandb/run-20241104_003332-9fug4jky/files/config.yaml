@@ -1,0 +1,151 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "2":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "3":
+                - 16
+                - 23
+                - 55
+            "4": 3.12.3
+            "5": 0.18.5
+            "8":
+                - 3
+                - 5
+            "12": 0.18.5
+            "13": windows-amd64
+dataset:
+    value:
+        augmentations:
+            color_jitter: true
+            dataset: CIFAR100
+            normalization: true
+            random_crop: true
+            random_flip: true
+            random_rotation: false
+        batch_size: 256
+        cache: true
+        name: CIFAR100
+        other_augmentations:
+            enabled: true
+model:
+    value:
+        name: resnet18
+        num_classes: 100
+        pretrained: false
+optimizer:
+    value:
+        learning_rate: 0.1
+        momentum: 0.9
+        nesterov: true
+        type: SGD
+        weight_decay: 0.01
+scheduler:
+    value:
+        T_max: 50
+        gamma: 0.1
+        patience: 5
+        step_size: 5
+        type: ReduceLROnPlateau
+sweep:
+    value:
+        enabled: false
+        method: grid
+        metric:
+            goal: maximize
+            name: Validation Accuracy
+        parameters:
+            augmentations_enabled:
+                values:
+                    - true
+                    - false
+            dataset.batch_size:
+                values:
+                    - 256
+            dataset.cache:
+                values:
+                    - true
+            dataset.name:
+                values:
+                    - CIFAR100
+            model.name:
+                values:
+                    - resnet18
+                    - preact_resnet18
+            optimizer.learning_rate:
+                values:
+                    - 0.001
+                    - 0.01
+            optimizer.momentum:
+                values:
+                    - 0.9
+            optimizer.nesterov:
+                values:
+                    - true
+            optimizer.type:
+                values:
+                    - SGD
+                    - Adam
+            optimizer.weight_decay:
+                values:
+                    - 0.001
+            other_augmentations_enabled:
+                values:
+                    - true
+                    - false
+            scheduler.T_max:
+                values:
+                    - 50
+            scheduler.gamma:
+                values:
+                    - 0.1
+            scheduler.patience:
+                values:
+                    - 5
+            scheduler.step_size:
+                values:
+                    - 10
+            scheduler.type:
+                values:
+                    - ReduceLROnPlateau
+                    - CosineAnnealingLR
+            training.early_stopping.enabled:
+                values:
+                    - true
+            training.early_stopping.min_delta:
+                values:
+                    - 0.01
+            training.early_stopping.patience:
+                values:
+                    - 3
+            training.epochs:
+                values:
+                    - 1
+training:
+    value:
+        early_stopping:
+            enabled: true
+            min_delta: 0.01
+            patience: 3
+        epochs: 50

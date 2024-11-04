@@ -1,0 +1,17 @@
+{"time":"2024-11-04T04:29:37.9971788+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-04T04:29:37.9971788+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241104_042937-thoihsv8\\logs\\debug-core.log"}
+{"time":"2024-11-04T04:29:38.1082964+02:00","level":"INFO","msg":"created new stream","id":"thoihsv8"}
+{"time":"2024-11-04T04:29:38.1088017+02:00","level":"INFO","msg":"stream: started","id":"thoihsv8"}
+{"time":"2024-11-04T04:29:38.1088017+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"thoihsv8"}}
+{"time":"2024-11-04T04:29:38.1088017+02:00","level":"INFO","msg":"sender: started","stream_id":"thoihsv8"}
+{"time":"2024-11-04T04:29:38.1088017+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"thoihsv8"}}
+{"time":"2024-11-04T04:29:38.426833+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-04T04:37:54.3171415+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-04T04:37:54.3171415+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-04T04:37:55.3194203+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history, console logs","runtime_seconds":1.3528575},{"desc":"updating run config","runtime_seconds":1.0038611}],"total_operations":2}}
+{"time":"2024-11-04T04:37:56.5096069+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-04T04:37:57.8018139+02:00","level":"INFO","msg":"stream: closing","id":"thoihsv8"}
+{"time":"2024-11-04T04:37:57.8018139+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"thoihsv8"}}
+{"time":"2024-11-04T04:37:57.8018139+02:00","level":"INFO","msg":"sender: closed","stream_id":"thoihsv8"}
+{"time":"2024-11-04T04:37:57.8018139+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"thoihsv8"}}
+{"time":"2024-11-04T04:37:57.8018139+02:00","level":"INFO","msg":"stream: closed","id":"thoihsv8"}

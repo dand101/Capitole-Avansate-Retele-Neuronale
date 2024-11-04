@@ -10,6 +10,8 @@ dataset:
     random_rotation: true
     color_jitter: true
     normalization: true
+  other_augmentations:
+    enabled: true
 
 model:
   name: "resnet18"
@@ -17,41 +19,77 @@ model:
   pretrained: true
 
 optimizer:
-  type: "SGD"                  # Options: SGD, Adam, AdamW, RmsProp
-  learning_rate: 0.01
+  type: "Adam"
+  learning_rate: 0.001
   momentum: 0.9
   weight_decay: 0.0001
-  nesterov: true              # Only for SGD
+  nesterov: true
 
 scheduler:
-  type: "ReduceLROnPlateau"               # Options: StepLR, ReduceLROnPlateau, or None
-  step_size: 10
+  type: "CosineAnnealingLR"
+  step_size: 5
   gamma: 0.1
-  patience: 5                  # Only for ReduceLROnPlateau
+  patience: 5
+  T_max: 50
 
 training:
-  epochs: 50                   # Number of training epochs
+  epochs: 50
   early_stopping:
-    enabled: true              # Enable or disable early stopping
-    patience: 3                # Number of epochs with no improvement to wait before stopping
-    min_delta: 0.01            # Minimum change to qualify as an improvement
+    enabled: true
+    patience: 15
+    min_delta: 0.01
 
 sweep:
-  enabled: false                # Enable or disable parameter sweep
-  method: "grid"               # Sweep method: grid, random, or bayes
+  enabled: false
+  method: "grid"
   metric:
     name: "Validation Accuracy"
-    goal: "maximize"           # Goal: maximize or minimize
+    goal: "maximize"
   parameters:
+
+    training.epochs:
+      values: [ 50 ]
+    training.early_stopping.enabled:
+      values: [ true ]
+    training.early_stopping.patience:
+      values: [ 3 ]
+    training.early_stopping.min_delta:
+      values: [ 0.01 ]
+
+    dataset.name:
+      values: [ CIFAR100 ]
+    dataset.batch_size:
+      values: [ 256 ]
+    dataset.cache:
+      values: [ true ]
+
     model.name:
-      values: [ "resnet18", "resnet50" ]
-    dataset.augmentations.random_flip:
-      values: [ true, false ]
-    dataset.augmentations.color_jitter:
-      values: [ true, false ]
+      values: [ "resnet18", "preact_resnet18" ]
+    model.pretrained:
+      values: [ true ]
+    augmentations_enabled:
+      values: [ true ]
+    other_augmentations_enabled:
+      values: [ false , true ]
+
     optimizer.type:
       values: [ "SGD", "Adam" ]
     optimizer.learning_rate:
-      values: [ 0.001, 0.01 ]
+      values: [ 0.0001, 0.01 ]
+    optimizer.weight_decay:
+      values: [ 0.001 ]
     optimizer.momentum:
-      values: [ 0.9, 0.95 ]
+      values: [ 0.9 ]
+    optimizer.nesterov:
+      values: [ true ]
+
+    scheduler.type:
+      values: [ "ReduceLROnPlateau" , "CosineAnnealingLR" ]
+    scheduler.step_size:
+      values: [ 10 ]
+    scheduler.gamma:
+      values: [ 0.1 ]
+    scheduler.patience:
+      values: [ 5 ]
+    scheduler.T_max:
+      values: [ 50 ]

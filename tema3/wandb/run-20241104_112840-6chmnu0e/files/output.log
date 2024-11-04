@@ -1,0 +1,63 @@
+
+Epoch 1/50
+Training: 100%|██████████| 196/196 [00:46<00:00,  4.18batch/s, accuracy=2.62, loss=4.22] 
+Average Training Loss: 4.5306, Training Accuracy: 2.62%
+Evaluating: 100%|██████████| 40/40 [00:37<00:00,  1.07batch/s, accuracy=4.78, loss=4.22]
+Validation Loss: 4.3301, Validation Accuracy: 4.78%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:12<00:00, 15.10batch/s, accuracy=4, loss=4.47]   
+Average Training Loss: 4.4378, Training Accuracy: 4.00%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 116.79batch/s, accuracy=5.5, loss=4.1]  
+Validation Loss: 4.2483, Validation Accuracy: 5.50%
+
+Epoch 3/50
+Training: 100%|██████████| 196/196 [00:11<00:00, 17.09batch/s, accuracy=4.68, loss=4.35]
+Average Training Loss: 4.3936, Training Accuracy: 4.68%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 124.29batch/s, accuracy=5.7, loss=4]    
+Validation Loss: 4.2003, Validation Accuracy: 5.70%
+
+Epoch 4/50
+Training: 100%|██████████| 196/196 [00:10<00:00, 18.47batch/s, accuracy=4.88, loss=4.36]
+Average Training Loss: 4.3791, Training Accuracy: 4.88%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 133.23batch/s, accuracy=6.03, loss=4.1] 
+Validation Loss: 4.1902, Validation Accuracy: 6.03%
+
+Epoch 5/50
+Training: 100%|██████████| 196/196 [00:10<00:00, 18.26batch/s, accuracy=5.05, loss=4.27]
+Average Training Loss: 4.3753, Training Accuracy: 5.05%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 83.16batch/s, accuracy=6.62, loss=4.07]
+Validation Loss: 4.2091, Validation Accuracy: 6.62%
+
+Epoch 6/50
+Training: 100%|██████████| 196/196 [00:10<00:00, 17.99batch/s, accuracy=5.3, loss=4.5]  
+Average Training Loss: 4.3534, Training Accuracy: 5.30%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 133.36batch/s, accuracy=7.23, loss=3.85]
+Validation Loss: 4.1546, Validation Accuracy: 7.23%
+
+Epoch 7/50
+Training: 100%|██████████| 196/196 [00:12<00:00, 15.68batch/s, accuracy=5.9, loss=4.5]  
+Average Training Loss: 4.3375, Training Accuracy: 5.90%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 84.25batch/s, accuracy=6.96, loss=3.87]
+Validation Loss: 4.1815, Validation Accuracy: 6.96%
+
+Epoch 8/50
+Training: 100%|██████████| 196/196 [00:12<00:00, 16.05batch/s, accuracy=5.77, loss=4.52]
+Average Training Loss: 4.3444, Training Accuracy: 5.77%
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 118.59batch/s, accuracy=6.55, loss=3.87]
+Validation Loss: 4.2010, Validation Accuracy: 6.55%
+
+Epoch 9/50
+Training:  82%|████████▏ | 161/196 [00:09<00:02, 16.34batch/s, accuracy=5.78, loss=4.44]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 297, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 293, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 210, in run_training
+    train_loss, train_accuracy = train_one_epoch(model, train_loader, optimizer, device, other_augmentation)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 139, in train_one_epoch
+    total_loss += loss.item() * inputs.size(0)
+                  ^^^^^^^^^^^
+KeyboardInterrupt

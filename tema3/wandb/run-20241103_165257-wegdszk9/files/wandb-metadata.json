@@ -1,0 +1,43 @@
+{
+  "os": "Windows-11-10.0.22631-SP0",
+  "python": "3.12.3",
+  "startedAt": "2024-11-03T14:52:57.107631Z",
+  "program": "C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\train.py",
+  "codePath": "tema3\\train.py",
+  "git": {
+    "remote": "https://github.com/dand101/Capitole-Avansate-Retele-Neuronale.git",
+    "commit": "d7cf621518d2f4dc36545200c376650d712ed6d8"
+  },
+  "email": "dandodun@gmail.com",
+  "root": "C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3",
+  "host": "dan",
+  "username": "dando",
+  "executable": "C:\\Users\\dando\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "codePathLocal": "train.py",
+  "cpu_count": 20,
+  "cpu_count_logical": 28,
+  "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1023272808448",
+      "used": "932678942720"
+    }
+  },
+  "memory": {
+    "total": "34067656704"
+  },
+  "cpu": {
+    "count": 20,
+    "countLogical": 28
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4070 SUPER",
+      "memoryTotal": "12878610432",
+      "cudaCores": 7168,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.6"
+}

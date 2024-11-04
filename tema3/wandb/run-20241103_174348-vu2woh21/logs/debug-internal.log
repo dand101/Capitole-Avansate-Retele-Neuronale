@@ -1,0 +1,17 @@
+{"time":"2024-11-03T17:43:48.842066+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T17:43:48.842066+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_174348-vu2woh21\\logs\\debug-core.log"}
+{"time":"2024-11-03T17:43:48.9533263+02:00","level":"INFO","msg":"created new stream","id":"vu2woh21"}
+{"time":"2024-11-03T17:43:48.9533263+02:00","level":"INFO","msg":"stream: started","id":"vu2woh21"}
+{"time":"2024-11-03T17:43:48.9533263+02:00","level":"INFO","msg":"sender: started","stream_id":"vu2woh21"}
+{"time":"2024-11-03T17:43:48.9533263+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"vu2woh21"}}
+{"time":"2024-11-03T17:43:48.9533263+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"vu2woh21"}}
+{"time":"2024-11-03T17:43:49.2893446+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T17:43:51.7425785+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T17:43:51.7425785+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T17:43:52.5366453+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T17:43:52.746678+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console logs","runtime_seconds":0.2098816}],"total_operations":1}}
+{"time":"2024-11-03T17:43:53.9656528+02:00","level":"INFO","msg":"stream: closing","id":"vu2woh21"}
+{"time":"2024-11-03T17:43:53.9656528+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"vu2woh21"}}
+{"time":"2024-11-03T17:43:53.9656528+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"vu2woh21"}}
+{"time":"2024-11-03T17:43:53.9656528+02:00","level":"INFO","msg":"sender: closed","stream_id":"vu2woh21"}
+{"time":"2024-11-03T17:43:53.9656528+02:00","level":"INFO","msg":"stream: closed","id":"vu2woh21"}

@@ -1,0 +1,16 @@
+{"time":"2024-11-04T14:36:04.1778812+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-04T14:36:04.1778812+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241104_143604-trx2djhm\\logs\\debug-core.log"}
+{"time":"2024-11-04T14:36:04.2904207+02:00","level":"INFO","msg":"created new stream","id":"trx2djhm"}
+{"time":"2024-11-04T14:36:04.2904207+02:00","level":"INFO","msg":"stream: started","id":"trx2djhm"}
+{"time":"2024-11-04T14:36:04.2904207+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"trx2djhm"}}
+{"time":"2024-11-04T14:36:04.2904207+02:00","level":"INFO","msg":"sender: started","stream_id":"trx2djhm"}
+{"time":"2024-11-04T14:36:04.2904207+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"trx2djhm"}}
+{"time":"2024-11-04T14:36:04.6530693+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-04T14:36:45.0416459+02:00","level":"INFO","msg":"stream: closing","id":"trx2djhm"}
+{"time":"2024-11-04T14:36:45.0416459+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-04T14:36:45.0416459+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-04T14:36:45.9961039+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-04T14:36:46.409006+02:00","level":"INFO","msg":"sender: closed","stream_id":"trx2djhm"}
+{"time":"2024-11-04T14:36:46.409006+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"trx2djhm"}}
+{"time":"2024-11-04T14:36:46.409006+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"trx2djhm"}}
+{"time":"2024-11-04T14:36:46.4095184+02:00","level":"INFO","msg":"stream: closed","id":"trx2djhm"}

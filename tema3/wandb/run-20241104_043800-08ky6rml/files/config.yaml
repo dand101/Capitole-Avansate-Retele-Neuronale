@@ -1,0 +1,82 @@
+_wandb:
+    value:
+        cli_version: 0.18.5
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "2":
+                - 1
+                - 2
+                - 3
+                - 41
+                - 49
+                - 51
+                - 55
+                - 63
+                - 105
+            "3":
+                - 2
+                - 13
+                - 16
+                - 23
+                - 24
+                - 55
+            "4": 3.12.3
+            "5": 0.18.5
+            "8":
+                - 3
+                - 5
+            "12": 0.18.5
+            "13": windows-amd64
+augmentations_enabled:
+    value: true
+dataset.batch_size:
+    value: 256
+dataset.cache:
+    value: true
+dataset.name:
+    value: CIFAR100
+model.name:
+    value: preact_resnet18
+model.pretrained:
+    value: true
+optimizer.learning_rate:
+    value: 0.0001
+optimizer.momentum:
+    value: 0.9
+optimizer.nesterov:
+    value: true
+optimizer.type:
+    value: Adam
+optimizer.weight_decay:
+    value: 0.001
+other_augmentations_enabled:
+    value: false
+scheduler.T_max:
+    value: 50
+scheduler.gamma:
+    value: 0.1
+scheduler.patience:
+    value: 5
+scheduler.step_size:
+    value: 10
+scheduler.type:
+    value: ReduceLROnPlateau
+training.early_stopping.enabled:
+    value: true
+training.early_stopping.min_delta:
+    value: 0.01
+training.early_stopping.patience:
+    value: 3
+training.epochs:
+    value: 50

@@ -1,0 +1,2 @@
+config is this lalalal
+{'dataset.augmentations.color_jitter': True, 'dataset.augmentations.random_flip': True, 'model.name': 'resnet18', 'optimizer.learning_rate': 0.001, 'optimizer.type': 'SGD'}

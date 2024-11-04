@@ -19,9 +19,13 @@ def create_transform(augment_config):
 
     transform_list.append(transforms.ToTensor())
 
+    if augment_config.get('dataset') == 'MNIST':
+        transform_list.append(transforms.Resize(28))
+        transform_list.append(transforms.Grayscale(num_output_channels=1))
+
     if augment_config.get('normalization', True):
         if augment_config['dataset'] in ['CIFAR10', 'CIFAR100']:
-            transform_list.append(transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]))
+            transform_list.append(transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.25, 0.25, 0.25]))
         elif augment_config['dataset'] == 'MNIST':
             transform_list.append(transforms.Normalize(mean=[0.5], std=[0.5]))
 

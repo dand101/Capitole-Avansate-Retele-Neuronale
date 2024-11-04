@@ -1,0 +1,10 @@
+wandb_version: 1
+
+model.name:
+  value: resnet18
+optimizer.learning_rate:
+  value: 0.001
+optimizer.momentum:
+  value: 0.95
+optimizer.type:
+  value: SGD

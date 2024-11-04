@@ -1,0 +1,26 @@
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Configure stats pid to 50492
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Loading settings from C:\Users\dando\.config\wandb\settings
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Loading settings from C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\settings
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-11-04 14:40:14,649 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-11-04 14:40:14,654 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'tema3\\train.py', 'program_abspath': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\train.py', 'program': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\train.py'}
+2024-11-04 14:40:14,654 INFO    MainThread:50492 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-11-04 14:40:14,654 INFO    MainThread:50492 [wandb_init.py:_log_setup():534] Logging user logs to C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\run-20241104_144014-x4ycj2bw\logs\debug.log
+2024-11-04 14:40:14,655 INFO    MainThread:50492 [wandb_init.py:_log_setup():535] Logging internal logs to C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\run-20241104_144014-x4ycj2bw\logs\debug-internal.log
+2024-11-04 14:40:14,655 INFO    MainThread:50492 [wandb_init.py:init():621] calling init triggers
+2024-11-04 14:40:14,655 INFO    MainThread:50492 [wandb_init.py:init():628] wandb.init called with sweep_config: {}
+config: {'dataset': {'name': 'MNIST', 'batch_size': 32, 'cache': True, 'augmentations': {'random_flip': True, 'random_crop': True, 'random_rotation': True, 'color_jitter': True, 'normalization': True, 'dataset': 'MNIST'}, 'other_augmentations': {'enabled': True}}, 'model': {'name': 'mlp', 'num_classes': 10, 'pretrained': True}, 'optimizer': {'type': 'Adam', 'learning_rate': 0.001, 'momentum': 0.9, 'weight_decay': 0.0001, 'nesterov': True}, 'scheduler': {'type': 'CosineAnnealingLR', 'step_size': 5, 'gamma': 0.1, 'patience': 5, 'T_max': 50}, 'training': {'epochs': 50, 'early_stopping': {'enabled': True, 'patience': 15, 'min_delta': 0.01}}, 'sweep': {'enabled': False, 'method': 'grid', 'metric': {'name': 'Validation Accuracy', 'goal': 'maximize'}, 'parameters': {'training.epochs': {'values': [50]}, 'training.early_stopping.enabled': {'values': [True]}, 'training.early_stopping.patience': {'values': [3]}, 'training.early_stopping.min_delta': {'values': [0.01]}, 'dataset.name': {'values': ['CIFAR100']}, 'dataset.batch_size': {'values': [256]}, 'dataset.cache': {'values': [True]}, 'model.name': {'values': ['resnet18', 'preact_resnet18']}, 'model.pretrained': {'values': [True]}, 'augmentations_enabled': {'values': [True]}, 'other_augmentations_enabled': {'values': [False, True]}, 'optimizer.type': {'values': ['SGD', 'Adam']}, 'optimizer.learning_rate': {'values': [0.0001, 0.01]}, 'optimizer.weight_decay': {'values': [0.001]}, 'optimizer.momentum': {'values': [0.9]}, 'optimizer.nesterov': {'values': [True]}, 'scheduler.type': {'values': ['ReduceLROnPlateau', 'CosineAnnealingLR']}, 'scheduler.step_size': {'values': [10]}, 'scheduler.gamma': {'values': [0.1]}, 'scheduler.patience': {'values': [5]}, 'scheduler.T_max': {'values': [50]}}}}
+2024-11-04 14:40:14,655 INFO    MainThread:50492 [wandb_init.py:init():671] starting backend
+2024-11-04 14:40:14,655 INFO    MainThread:50492 [wandb_init.py:init():675] sending inform_init request
+2024-11-04 14:40:14,657 INFO    MainThread:50492 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn, using: spawn
+2024-11-04 14:40:14,657 INFO    MainThread:50492 [wandb_init.py:init():688] backend started and connected
+2024-11-04 14:40:14,660 INFO    MainThread:50492 [wandb_init.py:init():783] updated telemetry
+2024-11-04 14:40:14,691 INFO    MainThread:50492 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2024-11-04 14:40:15,108 INFO    MainThread:50492 [wandb_init.py:init():867] starting run threads in backend
+2024-11-04 14:40:15,250 INFO    MainThread:50492 [wandb_run.py:_console_start():2463] atexit reg
+2024-11-04 14:40:15,250 INFO    MainThread:50492 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2024-11-04 14:40:15,250 INFO    MainThread:50492 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2024-11-04 14:40:15,251 INFO    MainThread:50492 [wandb_run.py:_redirect():2401] Redirects installed.
+2024-11-04 14:40:15,254 INFO    MainThread:50492 [wandb_init.py:init():911] run started, returning control to user process
+2024-11-04 14:40:54,906 WARNING MsgRouterThr:50492 [router.py:message_loop():77] message_loop has been closed

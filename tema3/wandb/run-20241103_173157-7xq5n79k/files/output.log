@@ -1,0 +1,49 @@
+
+Epoch 1/50
+Training: 100%|██████████| 196/196 [00:08<00:00, 23.79batch/s, loss=3.83]
+Average Training Loss: 4.0585
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 33.01batch/s, accuracy=22.1]
+Validation Accuracy: 22.06%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:08<00:00, 23.21batch/s, loss=2.55]
+Average Training Loss: 3.0394
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 32.36batch/s, accuracy=30.4]
+Validation Accuracy: 30.40%
+
+Epoch 3/50
+Training:  51%|█████     | 100/196 [00:04<00:04, 22.55batch/s, loss=2.69]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 217, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 213, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 174, in run_training
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 121, in train_one_epoch
+    for batch in tbar:
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\utils\data\dataloader.py", line 630, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\utils\data\dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torchvision\datasets\cifar.py", line 119, in __getitem__
+    img = self.transform(img)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torchvision\transforms\transforms.py", line 95, in __call__
+    img = t(img)
+          ^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torchvision\transforms\functional.py", line 174, in to_tensor
+    img = img.permute((2, 0, 1)).contiguous()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

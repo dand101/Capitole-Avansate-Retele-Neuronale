@@ -1,0 +1,17 @@
+{"time":"2024-11-03T15:57:54.3115894+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T15:57:54.3115894+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_155754-lwxqpbh7\\logs\\debug-core.log"}
+{"time":"2024-11-03T15:57:54.4230434+02:00","level":"INFO","msg":"created new stream","id":"lwxqpbh7"}
+{"time":"2024-11-03T15:57:54.4230434+02:00","level":"INFO","msg":"stream: started","id":"lwxqpbh7"}
+{"time":"2024-11-03T15:57:54.4230434+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lwxqpbh7"}}
+{"time":"2024-11-03T15:57:54.4230434+02:00","level":"INFO","msg":"sender: started","stream_id":"lwxqpbh7"}
+{"time":"2024-11-03T15:57:54.4230434+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lwxqpbh7"}}
+{"time":"2024-11-03T15:57:55.0860142+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T15:57:55.2531815+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T15:57:55.2537377+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T15:57:56.2590108+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.5111201}],"total_operations":1}}
+{"time":"2024-11-03T15:57:56.3103006+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T15:57:57.5920361+02:00","level":"INFO","msg":"stream: closing","id":"lwxqpbh7"}
+{"time":"2024-11-03T15:57:57.5920361+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lwxqpbh7"}}
+{"time":"2024-11-03T15:57:57.5920361+02:00","level":"INFO","msg":"sender: closed","stream_id":"lwxqpbh7"}
+{"time":"2024-11-03T15:57:57.5920361+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lwxqpbh7"}}
+{"time":"2024-11-03T15:57:57.5920361+02:00","level":"INFO","msg":"stream: closed","id":"lwxqpbh7"}

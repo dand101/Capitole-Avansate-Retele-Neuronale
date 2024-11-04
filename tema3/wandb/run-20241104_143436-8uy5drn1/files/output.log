@@ -1,0 +1,39 @@
+
+Epoch 1/50
+Training:   0%|          | 0/235 [00:20<?, ?batch/s]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 255, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 251, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 208, in run_training
+    train_loss, train_accuracy = train_one_epoch(model, train_loader, optimizer, device, other_augmentation)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 132, in train_one_epoch
+    outputs = model(inputs)
+              ^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\timm\models\resnet.py", line 636, in forward
+    x = self.forward_features(x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\timm\models\resnet.py", line 615, in forward_features
+    x = self.conv1(x)
+        ^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [64, 3, 7, 7], expected input[256, 1, 32, 32] to have 3 channels, but got 1 channels instead

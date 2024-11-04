@@ -1,0 +1,17 @@
+{"time":"2024-11-03T17:16:53.7452327+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T17:16:53.7452327+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_171653-lxutcixj\\logs\\debug-core.log"}
+{"time":"2024-11-03T17:16:53.8566332+02:00","level":"INFO","msg":"created new stream","id":"lxutcixj"}
+{"time":"2024-11-03T17:16:53.8566332+02:00","level":"INFO","msg":"stream: started","id":"lxutcixj"}
+{"time":"2024-11-03T17:16:53.8566332+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lxutcixj"}}
+{"time":"2024-11-03T17:16:53.8566332+02:00","level":"INFO","msg":"sender: started","stream_id":"lxutcixj"}
+{"time":"2024-11-03T17:16:53.8566332+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lxutcixj"}}
+{"time":"2024-11-03T17:16:55.1205474+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T17:16:55.6432924+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T17:16:55.6437982+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T17:16:56.4487433+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T17:16:56.6511227+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-11-03T17:16:57.7021645+02:00","level":"INFO","msg":"stream: closing","id":"lxutcixj"}
+{"time":"2024-11-03T17:16:57.7021645+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"lxutcixj"}}
+{"time":"2024-11-03T17:16:57.7021645+02:00","level":"INFO","msg":"sender: closed","stream_id":"lxutcixj"}
+{"time":"2024-11-03T17:16:57.7021645+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"lxutcixj"}}
+{"time":"2024-11-03T17:16:57.7021645+02:00","level":"INFO","msg":"stream: closed","id":"lxutcixj"}

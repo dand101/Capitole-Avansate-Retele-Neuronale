@@ -1,0 +1,33 @@
+
+Epoch 1/50
+Training: 100%|██████████| 196/196 [00:38<00:00,  5.03batch/s, loss=3.46]
+Average Training Loss: 3.9505
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 22.57batch/s, accuracy=15.2]
+Validation Accuracy: 15.17%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:38<00:00,  5.09batch/s, loss=3.15]
+Average Training Loss: 3.2527
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 23.37batch/s, accuracy=19.8]
+Validation Accuracy: 19.78%
+
+Epoch 3/50
+Training: 100%|██████████| 196/196 [00:38<00:00,  5.06batch/s, loss=2.66]
+Average Training Loss: 2.8041
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 23.41batch/s, accuracy=27.2]
+Validation Accuracy: 27.25%
+
+Epoch 4/50
+Training:  10%|█         | 20/196 [00:04<00:35,  4.93batch/s, loss=2.59]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 128, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 124, in main
+    run_training(config)
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 85, in run_training
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 40, in train_one_epoch
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

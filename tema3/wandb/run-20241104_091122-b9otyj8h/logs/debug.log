@@ -1,0 +1,26 @@
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Configure stats pid to 69160
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Loading settings from C:\Users\dando\.config\wandb\settings
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Loading settings from C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\settings
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'project': 'YourProjectName', 'entity': 'dandodun-universitatea-alexandru-ioan-cuza-din-ia-i', 'root_dir': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3', 'sweep_id': 'oyd3s88p', 'run_id': 'b9otyj8h', 'sweep_param_path': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\sweep-oyd3s88p\\config-b9otyj8h.yaml'}
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'tema3\\train.py', 'program_abspath': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\train.py', 'program': 'C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\train.py'}
+2024-11-04 09:11:22,204 INFO    Thread-10 (_run_job):69160 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:_log_setup():534] Logging user logs to C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\run-20241104_091122-b9otyj8h\logs\debug.log
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:_log_setup():535] Logging internal logs to C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\wandb\run-20241104_091122-b9otyj8h\logs\debug-internal.log
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():621] calling init triggers
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():628] wandb.init called with sweep_config: {'augmentations_enabled': True, 'dataset.batch_size': 256, 'dataset.cache': True, 'dataset.name': 'CIFAR100', 'model.name': 'resnet18', 'model.pretrained': True, 'optimizer.learning_rate': 0.0001, 'optimizer.momentum': 0.9, 'optimizer.nesterov': True, 'optimizer.type': 'SGD', 'optimizer.weight_decay': 0.001, 'other_augmentations_enabled': False, 'scheduler.T_max': 50, 'scheduler.gamma': 0.1, 'scheduler.patience': 5, 'scheduler.step_size': 10, 'scheduler.type': 'ReduceLROnPlateau', 'training.early_stopping.enabled': True, 'training.early_stopping.min_delta': 0.01, 'training.early_stopping.patience': 3, 'training.epochs': 50}
+config: {}
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():671] starting backend
+2024-11-04 09:11:22,205 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():675] sending inform_init request
+2024-11-04 09:11:22,209 INFO    Thread-10 (_run_job):69160 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn, using: spawn
+2024-11-04 09:11:22,211 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():688] backend started and connected
+2024-11-04 09:11:22,220 INFO    Thread-10 (_run_job):69160 [wandb_run.py:_config_callback():1390] config_cb None None {'augmentations_enabled': True, 'dataset.batch_size': 256, 'dataset.cache': True, 'dataset.name': 'CIFAR100', 'model.name': 'resnet18', 'model.pretrained': True, 'optimizer.learning_rate': 0.0001, 'optimizer.momentum': 0.9, 'optimizer.nesterov': True, 'optimizer.type': 'SGD', 'optimizer.weight_decay': 0.001, 'other_augmentations_enabled': False, 'scheduler.T_max': 50, 'scheduler.gamma': 0.1, 'scheduler.patience': 5, 'scheduler.step_size': 10, 'scheduler.type': 'ReduceLROnPlateau', 'training.early_stopping.enabled': True, 'training.early_stopping.min_delta': 0.01, 'training.early_stopping.patience': 3, 'training.epochs': 50}
+2024-11-04 09:11:22,221 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():783] updated telemetry
+2024-11-04 09:11:22,518 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2024-11-04 09:11:22,843 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():867] starting run threads in backend
+2024-11-04 09:11:23,004 INFO    Thread-10 (_run_job):69160 [wandb_run.py:_console_start():2463] atexit reg
+2024-11-04 09:11:23,004 INFO    Thread-10 (_run_job):69160 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2024-11-04 09:11:23,004 INFO    Thread-10 (_run_job):69160 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2024-11-04 09:11:23,004 INFO    Thread-10 (_run_job):69160 [wandb_run.py:_redirect():2401] Redirects installed.
+2024-11-04 09:11:23,007 INFO    Thread-10 (_run_job):69160 [wandb_init.py:init():911] run started, returning control to user process

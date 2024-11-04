@@ -1,0 +1,55 @@
+
+Epoch 1/50
+Training:   0%|          | 0/196 [00:00<?, ?batch/s]C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py:132: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=(scaler is not None)):
+Training: 100%|██████████| 196/196 [00:45<00:00,  4.33batch/s, loss=4.33]
+Average Training Loss: 4.5038
+Evaluating: 100%|██████████| 40/40 [00:04<00:00,  9.24batch/s, accuracy=3.2] 
+Validation Accuracy: 3.20%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:34<00:00,  5.64batch/s, loss=4.11]
+Average Training Loss: 4.3134
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 24.60batch/s, accuracy=5.26]
+Validation Accuracy: 5.26%
+
+Epoch 3/50
+Training: 100%|██████████| 196/196 [00:38<00:00,  5.06batch/s, loss=3.89]
+Average Training Loss: 4.0913
+Evaluating: 100%|██████████| 40/40 [00:04<00:00,  9.97batch/s, accuracy=8.16]
+Validation Accuracy: 8.16%
+
+Epoch 4/50
+Training: 100%|██████████| 196/196 [01:14<00:00,  2.62batch/s, loss=3.83]
+Average Training Loss: 3.8765
+Evaluating: 100%|██████████| 40/40 [00:04<00:00,  9.87batch/s, accuracy=10.9]
+Validation Accuracy: 10.86%
+
+Epoch 5/50
+Training: 100%|██████████| 196/196 [00:44<00:00,  4.41batch/s, loss=3.82]
+Average Training Loss: 3.7144
+Evaluating: 100%|██████████| 40/40 [00:01<00:00, 26.68batch/s, accuracy=14.5]
+Validation Accuracy: 14.52%
+
+Epoch 6/50
+Training:  80%|████████  | 157/196 [00:29<00:07,  5.29batch/s, loss=3.5] 
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 240, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 236, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 197, in run_training
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device, scaler, other_augmentation)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 138, in train_one_epoch
+    scaler.step(optimizer)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 454, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 351, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\amp\grad_scaler.py", line 351, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+               ^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,17 @@
+{"time":"2024-11-03T17:01:33.3613786+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T17:01:33.3613786+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_170133-6pkezag5\\logs\\debug-core.log"}
+{"time":"2024-11-03T17:01:33.4719284+02:00","level":"INFO","msg":"created new stream","id":"6pkezag5"}
+{"time":"2024-11-03T17:01:33.4719284+02:00","level":"INFO","msg":"stream: started","id":"6pkezag5"}
+{"time":"2024-11-03T17:01:33.4719284+02:00","level":"INFO","msg":"sender: started","stream_id":"6pkezag5"}
+{"time":"2024-11-03T17:01:33.4719284+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"6pkezag5"}}
+{"time":"2024-11-03T17:01:33.4719284+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"6pkezag5"}}
+{"time":"2024-11-03T17:01:33.7933098+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T17:01:34.7016102+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T17:01:34.7021142+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T17:01:35.4933531+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T17:01:35.7169606+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary","runtime_seconds":0.2236075}],"total_operations":1}}
+{"time":"2024-11-03T17:01:36.7855131+02:00","level":"INFO","msg":"stream: closing","id":"6pkezag5"}
+{"time":"2024-11-03T17:01:36.7855131+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"6pkezag5"}}
+{"time":"2024-11-03T17:01:36.7855131+02:00","level":"INFO","msg":"sender: closed","stream_id":"6pkezag5"}
+{"time":"2024-11-03T17:01:36.7855131+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"6pkezag5"}}
+{"time":"2024-11-03T17:01:36.7855131+02:00","level":"INFO","msg":"stream: closed","id":"6pkezag5"}

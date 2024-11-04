@@ -1,0 +1,17 @@
+{"time":"2024-11-03T17:42:43.4427155+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T17:42:43.4427155+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_174243-8grw50zn\\logs\\debug-core.log"}
+{"time":"2024-11-03T17:42:43.5542175+02:00","level":"INFO","msg":"created new stream","id":"8grw50zn"}
+{"time":"2024-11-03T17:42:43.5542175+02:00","level":"INFO","msg":"stream: started","id":"8grw50zn"}
+{"time":"2024-11-03T17:42:43.5542175+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"8grw50zn"}}
+{"time":"2024-11-03T17:42:43.5542175+02:00","level":"INFO","msg":"sender: started","stream_id":"8grw50zn"}
+{"time":"2024-11-03T17:42:43.5542175+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8grw50zn"}}
+{"time":"2024-11-03T17:42:43.9513798+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T17:42:44.6927233+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T17:42:44.6937683+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T17:42:45.6997285+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.8179531}],"total_operations":1}}
+{"time":"2024-11-03T17:42:46.9871194+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T17:42:48.2526894+02:00","level":"INFO","msg":"stream: closing","id":"8grw50zn"}
+{"time":"2024-11-03T17:42:48.2526894+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"8grw50zn"}}
+{"time":"2024-11-03T17:42:48.2526894+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"8grw50zn"}}
+{"time":"2024-11-03T17:42:48.2526894+02:00","level":"INFO","msg":"sender: closed","stream_id":"8grw50zn"}
+{"time":"2024-11-03T17:42:48.2532731+02:00","level":"INFO","msg":"stream: closed","id":"8grw50zn"}

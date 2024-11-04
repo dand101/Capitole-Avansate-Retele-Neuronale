@@ -4,6 +4,10 @@ import torch.nn as nn
 
 
 def get_resnet18_model(num_classes, pretrained=True):
-    model = create_model("resnet18", pretrained=pretrained)
-    model.fc = nn.Linear(model.fc.in_features, num_classes)
+    model = create_model("resnet18", pretrained=pretrained, num_classes=num_classes)
+    model = nn.Sequential(
+        nn.Upsample(size=(224, 224), mode='bilinear', align_corners=False),
+        model
+    )
+
     return model

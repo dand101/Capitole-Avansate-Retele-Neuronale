@@ -108,29 +108,29 @@ def create_extra(base_train_set):
         normalized_image = normalize(tensor_image)
         train_set.append((normalized_image, label))
 
-        flipped_image, label = apply_transformations(img, label, 'flip')
-        train_set.append((normalize(to_tensor(flipped_image)), label))
-
-        cropped_image, label = apply_transformations(img, label, 'crop')
-        train_set.append((normalize(to_tensor(cropped_image)), label))
-
-        affine_image, label = apply_transformations(img, label, 'affine')
-        train_set.append((normalize(to_tensor(affine_image)), label))
-
-        rotated_image, label = apply_transformations(img, label, 'rotation')
-        train_set.append((normalize(to_tensor(rotated_image)), label))
-
-        perspective_image, label = apply_transformations(img, label, 'perspective')
-        train_set.append((normalize(to_tensor(perspective_image)), label))
-
-        jittered_image, label = apply_transformations(img, label, 'jitter')
-        train_set.append((normalize(to_tensor(jittered_image)), label))
-
-        grayscale_image, label = apply_transformations(img, label, 'grayscale')
-        train_set.append((normalize(to_tensor(grayscale_image)), label))
-
-        solarized_image, label = apply_transformations(img, label, 'solarize')
-        train_set.append((normalize(to_tensor(solarized_image)), label))
+        # flipped_image, label = apply_transformations(img, label, 'flip')
+        # train_set.append((normalize(to_tensor(flipped_image)), label))
+        #
+        # cropped_image, label = apply_transformations(img, label, 'crop')
+        # train_set.append((normalize(to_tensor(cropped_image)), label))
+        #
+        # affine_image, label = apply_transformations(img, label, 'affine')
+        # train_set.append((normalize(to_tensor(affine_image)), label))
+        #
+        # rotated_image, label = apply_transformations(img, label, 'rotation')
+        # train_set.append((normalize(to_tensor(rotated_image)), label))
+        #
+        # perspective_image, label = apply_transformations(img, label, 'perspective')
+        # train_set.append((normalize(to_tensor(perspective_image)), label))
+        #
+        # jittered_image, label = apply_transformations(img, label, 'jitter')
+        # train_set.append((normalize(to_tensor(jittered_image)), label))
+        #
+        # grayscale_image, label = apply_transformations(img, label, 'grayscale')
+        # train_set.append((normalize(to_tensor(grayscale_image)), label))
+        #
+        # solarized_image, label = apply_transformations(img, label, 'solarize')
+        # train_set.append((normalize(to_tensor(solarized_image)), label))
 
     final_train_set = SimpleCachedDataset(train_set)
 

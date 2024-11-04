@@ -1,0 +1,12 @@
+wandb_version: 1
+
+dataset.augmentations.color_jitter:
+  value: true
+dataset.augmentations.random_flip:
+  value: true
+model.name:
+  value: resnet18
+optimizer.learning_rate:
+  value: 0.01
+optimizer.type:
+  value: SGD

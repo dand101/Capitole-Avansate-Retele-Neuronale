@@ -112,9 +112,5 @@ def PreActResNet18_C10(num_classes):
     return PreActResNet_C10(PreActBlock, [2, 2, 2, 2], num_classes)
 
 
-def get_model():
-    return PreActResNet18_C10(10)
-
-
 def get_preact_resnet18_model(num_classes):
     return PreActResNet18_C10(num_classes)

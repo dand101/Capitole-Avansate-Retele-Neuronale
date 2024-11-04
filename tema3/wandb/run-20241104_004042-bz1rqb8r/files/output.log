@@ -1,0 +1,127 @@
+
+Epoch 1/50
+Training:   0%|          | 0/196 [00:00<?, ?batch/s]C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py:147: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Training: 100%|██████████| 196/196 [00:45<00:00,  4.26batch/s, loss=4.48]
+Average Training Loss: 4.5617
+Evaluating: 100%|██████████| 40/40 [00:39<00:00,  1.00batch/s, accuracy=3.52]
+Validation Accuracy: 3.52%
+
+Epoch 2/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 34.07batch/s, loss=4.41]
+Average Training Loss: 4.4962
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 148.78batch/s, accuracy=3.9] 
+Validation Accuracy: 3.90%
+
+Epoch 3/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.48batch/s, loss=4.51]
+Average Training Loss: 4.4703
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 156.96batch/s, accuracy=4.67]
+Validation Accuracy: 4.67%
+
+Epoch 4/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.59batch/s, loss=4.45]
+Average Training Loss: 4.4081
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 148.02batch/s, accuracy=6.56]
+Validation Accuracy: 6.56%
+
+Epoch 5/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.70batch/s, loss=4.33]
+Average Training Loss: 4.3043
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 151.42batch/s, accuracy=9.03]
+Validation Accuracy: 9.03%
+
+Epoch 6/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.99batch/s, loss=4.06]
+Average Training Loss: 4.2097
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 146.36batch/s, accuracy=11.7]
+Validation Accuracy: 11.70%
+
+Epoch 7/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 32.83batch/s, loss=4.33]
+Average Training Loss: 4.1582
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 166.12batch/s, accuracy=13.5]
+Validation Accuracy: 13.54%
+
+Epoch 8/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 32.75batch/s, loss=4.01]
+Average Training Loss: 4.1334
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 165.57batch/s, accuracy=15.2]
+Validation Accuracy: 15.17%
+
+Epoch 9/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 34.09batch/s, loss=4.14]
+Average Training Loss: 4.0333
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 161.56batch/s, accuracy=17.4]
+Validation Accuracy: 17.39%
+
+Epoch 10/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 34.12batch/s, loss=4.3] 
+Average Training Loss: 4.0437
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 167.00batch/s, accuracy=18]  
+Validation Accuracy: 18.00%
+
+Epoch 11/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 34.12batch/s, loss=3.96]
+Average Training Loss: 3.9623
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 161.96batch/s, accuracy=19.2]
+Validation Accuracy: 19.24%
+
+Epoch 12/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 34.13batch/s, loss=4.2] 
+Average Training Loss: 3.9552
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 162.79batch/s, accuracy=19.6]
+Validation Accuracy: 19.58%
+
+Epoch 13/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.45batch/s, loss=4.33]
+Average Training Loss: 3.9503
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 151.65batch/s, accuracy=20.1]
+Validation Accuracy: 20.13%
+
+Epoch 14/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 32.73batch/s, loss=3.79]
+Average Training Loss: 3.9275
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 137.80batch/s, accuracy=20.6]
+Validation Accuracy: 20.64%
+
+Epoch 15/50
+Training: 100%|██████████| 196/196 [00:06<00:00, 30.15batch/s, loss=3.66]
+Average Training Loss: 3.9515
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 152.12batch/s, accuracy=20.8]
+Validation Accuracy: 20.79%
+
+Epoch 16/50
+Training: 100%|██████████| 196/196 [00:05<00:00, 33.31batch/s, loss=4.03]
+Average Training Loss: 3.9228
+Evaluating: 100%|██████████| 40/40 [00:00<00:00, 159.12batch/s, accuracy=20.7]
+Validation Accuracy: 20.70%
+
+Epoch 17/50
+Training:  74%|███████▍  | 145/196 [00:04<00:01, 32.24batch/s, loss=3.73]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 255, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 251, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 212, in run_training
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device, other_augmentation)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 136, in train_one_epoch
+    for batch in tbar:
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1191, in __iter__
+    self.update(n - last_print_n)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1242, in update
+    self.refresh(lock_args=self.lock_args)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1347, in refresh
+    self.display()
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1495, in display
+    self.sp(self.__str__() if msg is None else msg)
+            ^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 1151, in __str__
+    return self.format_meter(**self.format_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\tqdm\std.py", line 565, in format_meter
+    n_fmt = str(n)
+            ^^^^^^
+KeyboardInterrupt

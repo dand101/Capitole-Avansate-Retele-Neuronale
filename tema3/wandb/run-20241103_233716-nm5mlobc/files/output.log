@@ -1,0 +1,25 @@
+
+Epoch 1/50
+Training:   0%|          | 0/196 [00:48<?, ?batch/s]
+Traceback (most recent call last):
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 239, in <module>
+    main()
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 235, in main
+    run_training(config, config['sweep']['enabled'])
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 196, in run_training
+    avg_loss = train_one_epoch(model, train_loader, optimizer, device, other_augmentation)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\Documents\GitHub\Capitole-Avansate-Retele-Neuronale\tema3\train.py", line 133, in train_one_epoch
+    loss = nn.CrossEntropyLoss(outputs, labels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1183, in __init__
+    super().__init__(weight, size_average, reduce, reduction)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 30, in __init__
+    super().__init__(size_average, reduce, reduction)
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 23, in __init__
+    self.reduction: str = _Reduction.legacy_get_string(size_average, reduce)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dando\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\_reduction.py", line 35, in legacy_get_string
+    if size_average and reduce:
+       ^^^^^^^^^^^^
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous

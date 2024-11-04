@@ -1,0 +1,17 @@
+{"time":"2024-11-03T16:02:55.2468614+02:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-11-03T16:02:55.2468614+02:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\dando\\Documents\\GitHub\\Capitole-Avansate-Retele-Neuronale\\tema3\\wandb\\run-20241103_160255-yw4lheo4\\logs\\debug-core.log"}
+{"time":"2024-11-03T16:02:55.3580391+02:00","level":"INFO","msg":"created new stream","id":"yw4lheo4"}
+{"time":"2024-11-03T16:02:55.3580391+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"yw4lheo4"}}
+{"time":"2024-11-03T16:02:55.3580391+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"yw4lheo4"}}
+{"time":"2024-11-03T16:02:55.3585768+02:00","level":"INFO","msg":"stream: started","id":"yw4lheo4"}
+{"time":"2024-11-03T16:02:55.3585768+02:00","level":"INFO","msg":"sender: started","stream_id":"yw4lheo4"}
+{"time":"2024-11-03T16:02:55.6546716+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-03T16:02:55.8239264+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-03T16:02:55.8240276+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-03T16:02:56.8335299+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.4725088},{"desc":"uploading config.yaml","runtime_seconds":0.2509532,"progress":"969B/969B"},{"desc":"uploading output.log","runtime_seconds":0.2509532}],"total_operations":3}}
+{"time":"2024-11-03T16:02:56.9618157+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-03T16:02:58.2318655+02:00","level":"INFO","msg":"stream: closing","id":"yw4lheo4"}
+{"time":"2024-11-03T16:02:58.2318655+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"yw4lheo4"}}
+{"time":"2024-11-03T16:02:58.2318655+02:00","level":"INFO","msg":"sender: closed","stream_id":"yw4lheo4"}
+{"time":"2024-11-03T16:02:58.2318655+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"yw4lheo4"}}
+{"time":"2024-11-03T16:02:58.2318655+02:00","level":"INFO","msg":"stream: closed","id":"yw4lheo4"}

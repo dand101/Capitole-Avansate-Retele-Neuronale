@@ -8,7 +8,7 @@ def get_optimizer(model, config):
     weight_decay = config['optimizer'].get('weight_decay', 0.0)
 
     if optimizer_type == "SGD":
-        momentum = config['optimizer'].get('momentum', 0.0)
+        momentum = config['optimizer'].get('momentum', 0.01)
         nesterov = config['optimizer'].get('nesterov', False)
 
         if nesterov and not momentum:
@@ -23,7 +23,7 @@ def get_optimizer(model, config):
         return optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
 
     elif optimizer_type == "RmsProp":
-        momentum = config['optimizer'].get('momentum', 0.0)
+        momentum = config['optimizer'].get('momentum', 0.01)
         return optim.RMSprop(model.parameters(), lr=learning_rate, weight_decay=weight_decay, momentum=momentum)
 
     else:
